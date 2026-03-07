@@ -17,6 +17,7 @@ High-Level Pipeline Flow
 8.	Jenkins authenticates to Docker Hub and pushes the image
 9.	Cleanup process removes old/unused Docker images from the Jenkins server
 Pipeline Flow Diagram:
+![CI/CD Pipeline](image.png)
 
 
  
