@@ -6,7 +6,9 @@ application with Maven, performs automated quality and security checks,
 and then builds and pushes a Docker image to Docker Hub. Key
 Technologies: Jenkins, Docker, SonarQube, Trivy, Maven, GitHub, Docker
 Hub, AWS EC2
+
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
+
 Architecture and Pipeline Flow
 
 High-Level Pipeline Flow 1. Developer pushes code changes to GitHub
