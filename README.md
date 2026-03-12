@@ -5,7 +5,6 @@ Key Technologies: Jenkins, Docker, SonarQube, Trivy, Maven, GitHub, Docker Hub, 
 ________________________________________
 Architecture and Pipeline Flow
 
-Figure 1: CI/CD Pipeline Architecture Diagram
 High-Level Pipeline Flow
 1.	Developer pushes code changes to GitHub repository
 2.	Jenkins automatically pulls the latest code from GitHub
@@ -16,7 +15,8 @@ High-Level Pipeline Flow
 7.	Jenkins builds a Docker image and tags it as chinmayjoshi972/javapp:latest
 8.	Jenkins authenticates to Docker Hub and pushes the image
 9.	Cleanup process removes old/unused Docker images from the Jenkins server
-Pipeline Flow Diagram:
+
+Figure 1: CI/CD Pipeline Architecture Diagram
 ![CI/CD Pipeline](image.png)
 
 
@@ -24,18 +24,12 @@ Pipeline Flow Diagram:
 
 ________________________________________
 Environment and Tools Configuration
-Technology Stack
-Tool	Purpose
-Jenkins	CI/CD orchestration and automation
-Docker	Container runtime and image building
-SonarQube	Static code analysis and quality gates
-Trivy	Container vulnerability scanning
-Maven	Java build and dependency management
-GitHub	Source code version control
-Docker Hub	Container image registry
-AWS EC2	Cloud infrastructure hosting
-
 Table 1: Tools and Technologies Used
+## Tools and Technologies Used
+
+![Tools and Technologies](Tools%20and%20Technologies%20Used.png)
+
+
 ________________________________________
 Detailed Setup and Installation
 3.1 Jenkins Setup on Ubuntu (AWS EC2)
@@ -63,6 +57,9 @@ Access Jenkins web UI at http://<server-ip>:8080 and complete the initial setup 
  
 
 Figure 2: Jenkins Dashboard and Configuration Screenshots
+
+![Jenkins Dashboard](Jenkins%20Dashboard%20and%20Configuration%20Screenshots.png)
+
 ________________________________________
 3.2 Docker Installation and Configuration
 Install Docker:
@@ -81,6 +78,10 @@ docker images
  
 
 Figure 3: Docker Installation Verification
+
+## Docker Installation Verification
+
+![Docker Installation](Docker%20Installation%20Verification.png)
 ________________________________________
 3.3 SonarQube Setup with Docker
 Run SonarQube Container:
@@ -98,6 +99,10 @@ SonarQube Project Configuration:
 4.	Set up Quality Gate rules (code coverage, bugs, vulnerabilities, code smells)  
 
 Figure 4: SonarQube Dashboard and Project Configuration
+
+## SonarQube Dashboard and Project Configuration
+
+![SonarQube](SonarQube%20Dashboard%20and%20Project%20Configuration.png)
 ________________________________________
 3.4 Trivy Installation for Security Scanning
 Install Trivy:
@@ -112,6 +117,12 @@ trivy image nginx
 Trivy scans container images for known vulnerabilities (CVEs) in OS packages and application dependencies.
   
 Figure 5: Trivy Vulnerability Scan Results
+
+## Trivy Vulnerability Scan Results
+
+![Trivy Scan](Trivy%20Vulnerability%20Scan%20Results1.png)
+
+![Trivy Scan](Trivy%20Vulnerability%20Scan%20Results2.png)
 ________________________________________
 3.5 Maven and Source Code Repository
 Clone Application Repository:
@@ -141,6 +152,10 @@ The Jenkins pipeline consists of nine sequential stages:
 9.	Docker Image Cleanup – Remove local images to free disk space
  
 Figure 6: Jenkins Pipeline Stage View
+
+## Jenkins Pipeline Stage View
+
+![Jenkins Pipeline](Jenkins%20Pipeline%20Stage%20View.png)
 ________________________________________
 4.2 Key Pipeline Commands
 Docker Build Command:
@@ -235,6 +250,10 @@ Pipeline Execution Flow:
 ✓ Docker Image Cleanup
   
 Figure 7: Successful Jenkins Pipeline Execution
+
+## Successful Jenkins Pipeline Execution
+
+![Pipeline Success](Successful%20Jenkins%20Pipeline%20Execution.png)
 ________________________________________
 7.2 Final Deliverables
 Docker Image Published:
@@ -250,13 +269,9 @@ CI/CD Integration Achieved:
 •	Complete audit trail in Jenkins
 ________________________________________
 7.3 Key Metrics and Benefits
-Metric	Value
-Pipeline Stages	9
-Average Build Time	8-12 minutes
-Code Quality Gate	Configured and enforced
-Security Scanning	Automated with Trivy
-Deployment Target	Docker Hub
-Automation Level	Fully automated
+## Key Metrics and Benefits
+
+![Metrics](Key%20Metrics%20and%20Benefits.png)
 
 Table 2: CI/CD Pipeline Metrics
 Project Benefits:
